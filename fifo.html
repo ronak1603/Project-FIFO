@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="fifo.css"/>
+    <title>FIFO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        height:85%;
+      }
+      
+      table, td, th {
+        border: none;
+        border-collapse: collapse;
+        text-align: left;
+        padding: 8px;
+      }
+      tr{
+        border-bottom:2px solid  rgb(69, 70, 79);
+      }
+      td, th{
+        color:rgba(240, 255, 255, 0.737);
+      }
+
+      </style>
+  </head>
+  <body>
+    <div class="mainDiv">
+      <div class="mainLeft">
+        <h1 id="fifo">FIFO</h1>
+        <br>
+        <h5 id="main">MAIN</h5>
+        <li class="main"><i style="margin-right:5px;" class="fa fa-light fa-house"></i>DashBoard<i style="margin-left:17px;"class="fa fa-light fa-angle-down"></i></li>
+        <li class="main"><i style="margin-right:5px; margin-top:19px; margin-left:2px;" class="fa fa-light fa-calendar-day"></i>Calender</li>
+        <li class="main"><i style="margin-right:5px; margin-top:19px; margin-left:1px;" class="fa fa-regular fa-envelope"></i>Email<i style="margin-left:58px;"  class="fa fa-light fa-angle-down"></i></li>
+        <h5 id="components">COMPONENTS</h5>
+        <li class="components"><i style="margin-right:5px;" class="fa fa-light fa-box"></i>UI Elements<i style="margin-left:14px;" class="fa fa-light fa-angle-down"></i></li>
+        <li class="components"><i style="margin-right:5px; margin-top:8px; margin-left:2px;" class="fa fa-brands fa-wpforms"></i>Forms<i style="margin-left:53px;" class="fa fa-light fa-angle-down"></i></li>
+        <li class="components"><i style="margin-right:5px; margin-top:8px; margin-left:2px;" class="fa fa-light fa-chart-column"></i>Charts<i style="margin-left:49px;" class="fa fa-light fa-angle-down"></i></li>
+        <li class="components"><i style="margin-right:5px; margin-top:8px; margin-left:2px;" class="fa fa-light fa-table-cells-large"></i>Tables<i style="margin-left:49px;" class="fa fa-light fa-angle-down"></i></li>
+        <li class="components"><i style="margin-right:5px; margin-top:8px; margin-left:2px;" class="fa fa-brands fa-accessible-icon"></i>Icons<i style="margin-left:59px;" class="fa fa-light fa-angle-down"></i></li>
+        <li class="components"><i style="margin-right:5px; margin-top:8px; margin-left:2px;" class="fa fa-light fa-location-dot"></i>Maps<i style="margin-left:60px;" class="fa fa-light fa-angle-down"></i></li>
+        <li class="components"><i style="margin-right:5px; margin-top:8px; margin-left:2px;" class="fa fa-light fa-layer-group"></i></i>Layouts<i style="margin-left:39px;" class="fa fa-light fa-angle-down"></i></li>
+        <li class="components"><i style="margin-right:1px; margin-top:8px; margin-left:1px;" class="fa fa-light fa-box-archive"></i>Authentication</li>
+        <li class="components"><i style="margin-right:5px; margin-top:8px; margin-left:2px;" class="fa fa-light fa-file-lines"></i>Extra Pages<i style="margin-left:13px;" class="fa fa-light fa-angle-down"></i></li>
+        <li class="components"><i style="margin-right:5px; margin-top:8px; margin-left:2px;" class="fa fa-light fa-envelopes-bulk"></i>Email Templates</li>
+        <li class="components"><i style="margin-right:5px; margin-top:8px; margin-left:2px;" class="fa fa-light fa-ellipsis"></i>Mutli Level<i style="margin-left:20px;" class="fa fa-light fa-angle-down"></i></li>
+      </div>
+      <div class="mainRight">
+        <div class="navTop">
+          <ul class="nav1">
+            <li class="lines" id="top"><i class="fa fa-light fa-align-justify"></i><a href="#"></a></li>
+            <li class="setting" id="top"><i class="fa fa-light fa-gear"></i><a href="#"></a></li>
+            <li class="profile" id="top"><i class='fas fa-user-alt' style='font-size:15px'></i><a href="#"></a></li>
+            <li class="bell" id="top"><i class="fa fa-light fa-bell"></i><a href="#"></a></li>
+            <li class="expand" id="top"><i class="fa fa-light fa-expand"></i><a href="#"></a></li>
+            
+            <select style="border:none; background: none; float: right; text-align: center;margin-top: 15px; margin-bottom: 6px; width: 70px;">
+              <option value="americans">English</option>
+              <option value="indians">Hindi</option>
+            </select>
+            <div style="float:right">
+              <img src="usa.png" style="height:22px; width:20px; margin-top:14px; padding-right: 2px;">
+            </div>
+            <div id="create">
+              <select name="cars" id="cars">
+                <option value="volvo">Create</option>
+              </select>
+            </div>
+            <li class="top" id="srch">
+              <input id="search"type="text" placeholder="Search..." style="border:none;">
+            </li>
+          </ul>
+        </div>
+        <div class="card flex-container">
+          <div style="height:16vh">
+            <div class="half-box" style="width:100%; display:flex;height:65%">
+              <div style="width:25%;padding:10px; background-color:#8b83c1;"><i class="fa fa-light fa-copy"></i></div>
+              <div>
+                <p style="margin-top:-15px;font-size: 11px;height:50%;color:#2f2c3f;margin-left:10px;"><b>ORDERS</b></p>
+                <p style="margin-top:-30px;font-size:15px;height:50%;margin-left:10px; color:white;"><b>16,85</b><i class="fa fa-light fa-arrow-up" style="color:green"></i></p>
+              </div>
+              <div><p style="margin-top:-15px;font-size: 20px;height:50%;color:greenyellow;margin-left:20px;"><b>+12%</b></p></div>
+            </div>
+            <h6 style="color:#2f2c3f; font-size:15px">Since last month<i class="fa fa-light fa-angle-right" style="text-align:left; margin-left:95px; color:#2f2c3f;"></i></h6>
+          </div>
+          <div style="height:16vh">
+            <div class="half-box" style="width:100%; display:flex;height:65%">
+              <div style="width:25%;padding:10px; background-color:#8b83c1;"><i class="fa fa-light fa-copy"></i></div>
+              <div>
+                <p style="margin-top:-15px;font-size: 11px;height:50%;color:#2f2c3f;margin-left:10px;"><b>REVENUE</b></p>
+                <p style="margin-top:-30px;font-size:15px;height:50%;margin-left:10px; color:white;"><b>52,368</b><i class="fa fa-light fa-arrow-down" style="color:red"></i></p>
+              </div>
+              <div><p style="margin-top:-15px;font-size: 20px;height:50%;color:red;margin-left:20px;"><b>-28%</b></p></div>
+            </div>
+            <h6 style="color:#2f2c3f; font-size:15px">Since last month<i class="fa fa-light fa-angle-right" style="text-align:left; margin-left:95px; color:#2f2c3f;"></i></h6>
+          </div>
+          <div style="height:16vh">
+            <div class="half-box" style="width:100%; display:flex;height:65%">
+              <div style="width:25%;padding:10px; background-color:#8b83c1;"><i class="fa fa-light fa-pen"></i></div>
+              <div>
+                <p style="margin-top:-15px;font-size: 11px;height:50%;color:#2f2c3f;margin-left:10px;"><b>AVERAGE PRICE</b></p>
+                <p style="margin-top:-30px;font-size:15px;height:50%;margin-left:10px; color:white;"><b>15.8</b><i class="fa fa-light fa-arrow-up" style="color:green"></i></p>
+              </div>
+              <div><p style="margin-top:-15px;font-size: 20px;height:50%;color:rgb(51, 126, 207);margin-left:20px;"><b>0.0%</b></p></div>
+            </div>
+            <h6 style="color:#2f2c3f; font-size:15px">Since last month<i class="fa fa-light fa-angle-right" style="text-align:left; margin-left:95px; color:#2f2c3f;"></i></h6>
+          </div>
+          <div style="height:16vh">
+            <div class="half-box" style="width:100%; display:flex;height:65%">
+              <div style="width:25%;padding:10px; background-color:#8b83c1;"><i class="fa fa-light fa-suitcase"></i></div>
+              <div>
+                <p style="margin-top:-15px;font-size: 10px;height:50%;color:#2f2c3f;margin-left:10px;"><b>PRODUCT SOLD</b></p>
+                <p style="margin-top:-30px;font-size:15px;height:50%;margin-left:10px; color:white;"><b>24,36</b><i class="fa fa-light fa-arrow-up" style="color:green"></i></p>
+              </div>
+              <div><p style="margin-top:-15px;font-size: 20px;height:50%;color:yellow;margin-left:20px;"><b>+84%</b></p></div>
+            </div>
+            <h6 style="color:#2f2c3f; font-size:15px">Since last month<i class="fa fa-light fa-angle-right" style="text-align:left; margin-left:95px; color:#2f2c3f;"></i></h6>
+          </div>
+        </div>
+        <div class="other">
+          <div class="trans">
+            <h4 id="lt">Latest Transaction</h2>
+              <table>
+                <tr>
+                  <th>(#)Id</th>
+                  <th>Name</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+                <tr>
+                  <td>#12345</td>
+                  <td><i class='fas fa-user-alt' style="color: green; font-size:24px;"></i>Philip Sameed</td>
+                  <td>15/01/2018</td>
+                  <td>$45</td>
+                  <td><button type="button" class="button1">Delivered</button></td>
+                  <td><button type="button" class="button">Edit</button></td>
+                </tr>
+                <tr>
+                  <td>#12348</td>
+                  <td><i class='fas fa-user-alt' style="color:  rgb(179, 203, 83); font-size:24px;"></i>Brent shipley</td>
+                  <td>16/01/2019</td>
+                  <td>$76</td>
+                  <td><button type="button" class="button2">Pending</button></td>
+                  <td><button type="button" class="button">Edit</button></td>
+                </tr>
+                <tr>
+                  <td>#12376</td>
+                  <td><i class='fas fa-user-alt' style="color: rgb(207, 59, 36); font-size:24px;"></i>Robert Sitton</td>
+                  <td>17/01/2019</td>
+                  <td>$45</td>
+                  <td><button type="button" class="button3">Cancel</button></td>
+                  <td><button type="button" class="button">Edit</button></td>
+                </tr>
+                <tr>
+                  <td>#12390</td>
+                  <td><i class='fas fa-user-alt' style="color: green; font-size:24px;"></i>Alberto Jackson</td>
+                  <td>10/01/2018</td>
+                  <td>$80</td>
+                  <td><button type="button" class="button4">Delivered</button></td>
+                  <td><button type="button" class="button">Edit</button></td>
+                </tr>
+                <tr>
+                  <td>#12367</td>
+                  <td><i class='fas fa-user-alt' style="color: rgb(207, 59, 36); font-size:24px;" ></i>David</td>
+                  <td>11/01/2018</td>
+                  <td>$45</td>
+                  <td><button type="button" class="button5">Cancel</button></td>
+                  <td><button type="button" class="button">Edit</button></td>
+                </tr>
+                <tr>
+                  <td>#12309</td>
+                  <td><i class='fas fa-user-alt' style="color: green; font-size:24px;"></i>Philip Samead</td>
+                  <td>14/01/2018</td>
+                  <td>$45</td>
+                  <td><button type="button" class="button6">Delivered</button></td>
+                  <td><button type="button" class="button">Edit</button></td>
+                </tr>
+              </table>
+            </div>
+          <div class="chat">
+            <h4 id="chat">Chats</h4>
+            <div id="chat1">
+              <div id="texting">
+                <img id="left" src="profile.png">
+                <div id="text1" style="background-color: white; margin-left: 8px; border-radius: 5px;">
+                  <div style="width: 100%; height:50%; margin-left: 10px; color:bisque; margin-top: 5px;">John Doe</div>
+                  <div style="width: 100%; height:50%; margin-left: 10px; color:black;">Hello</div>
+                </div>
+              </div>
+              <div id="texting" style="margin-top:40px;">
+                <div id="text2" style="background-color: rgb(99, 93, 93); width:60%; margin-left:120px; border-radius: 5px;" >
+                  <div style="width: 100%; height:50%; margin-left: 200px; color:bisque; margin-top: 5px;">Steve</div>
+                  <div style="width: 100%; height:45%; margin-left: 120px; color:black;">Hi, How are you?</div>
+                </div>
+                <img id="right" src="profile.png">
+              </div>
+              <div id="texting" style="margin-top:40px;">
+                <img id="left" src="profile.png">
+                <div id="text1" style="background-color: white; margin-left: 8px; border-radius: 5px;">
+                  <div style="width: 100%; height:50%; margin-left: 10px; color:bisque; margin-top: 5px;">John Doe</div>
+                  <div style="width: 100%; height:50%; margin-left: 10px; color:black;">Yeah everything is fine</div>
+                </div>
+              </div>
+              <div id="texting" style="margin-top:40px;">
+                <div id="text2" style="background-color: rgb(99, 93, 93); width:60%; margin-left:120px; border-radius: 5px;" >
+                  <div style="width: 100%; height:50%; margin-left: 200px; color:bisque; margin-top: 5px;">Steve</div>
+                  <div style="width: 100%; height:45%; margin-left: 60px; color:black;">What about our meeting?</div>
+                </div>
+                <img id="right" src="profile.png">
+              </div>
+            </div>
+              <div id="chat2">
+                <input id="text_area" type="text" placeholder="Enter your text...">
+                <button id="send">send</button>
+              </div>
+            </div>
+        </div>
+        <div class="bottom"></div>
+        </div>
+    </div>
+  </body>
+</html>
